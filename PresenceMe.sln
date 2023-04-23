@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.5.33530.505
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PresenceMe", "PresenceMe\PresenceMe.csproj", "{B28A091E-30D0-4FAF-81E0-8F9DC01209C2}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B28A091E-30D0-4FAF-81E0-8F9DC01209C2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B28A091E-30D0-4FAF-81E0-8F9DC01209C2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B28A091E-30D0-4FAF-81E0-8F9DC01209C2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B28A091E-30D0-4FAF-81E0-8F9DC01209C2}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {D81C00C5-BA9C-4A96-9BC0-A41EED5CF75F}
+	EndGlobalSection
+EndGlobal
