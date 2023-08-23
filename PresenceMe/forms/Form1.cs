@@ -22,7 +22,7 @@ namespace PresenceMe.forms
             //Database database = new Database();
 
             serialPort = new SerialPort();
-            serialPort.PortName = "COM6";
+            serialPort.PortName = "COM10";
             serialPort.BaudRate = 9600;
             serialPort.DataBits = 8;
             serialPort.Parity = Parity.None;
