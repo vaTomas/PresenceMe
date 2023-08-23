@@ -81,10 +81,10 @@
     <Compile Include="forms\Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
-    <Compile Include="packages\AttendanceManager.cs" />
-    <Compile Include="packages\Encryption.cs" />
-    <Compile Include="packages\FileManager.cs" />
-    <Compile Include="packages\IdentityCheck.cs" />
+    <Compile Include="my_packages\AttendanceManager.cs" />
+    <Compile Include="my_packages\Encryption.cs" />
+    <Compile Include="my_packages\FileManager.cs" />
+    <Compile Include="my_packages\IdentityCheck.cs" />
     <Compile Include="serial\serialPort.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
