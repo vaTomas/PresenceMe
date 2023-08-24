@@ -34,6 +34,7 @@ void loop() {
     mfrc522.PICC_HaltA();
     // Stop the encryption process
     mfrc522.PCD_StopCrypto1();
+    tone(BUZZER_PIN, BUZZER_FREQUENCY, 100);
   }
 }
 

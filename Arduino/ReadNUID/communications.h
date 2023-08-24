@@ -20,7 +20,7 @@ void establishContact() {
         Serial.println("00000000");
         break;
       }
-    }
+    } 
 
     clearSerialBuffer();
   }
