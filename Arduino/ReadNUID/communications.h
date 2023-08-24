@@ -10,7 +10,7 @@ void establishContact() {
     uint8_t pingCode = random();
     Serial.println(uint8ToBinaryString(pingCode));
 
-    delay(5000); // ping try wait
+    // delay(200); // ping try wait
 
     if (Serial.available()) {
       String machineResponse = readSerialInputString();
@@ -29,7 +29,7 @@ void establishContact() {
 
 String readSerialInputString(){
   String serialString = Serial.readString();
-  serialString = removeLastCharacter(serialString);
+  // serialString = removeLastCharacter(serialString);
   return serialString;
 }
 
