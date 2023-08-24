@@ -1,17 +1,18 @@
 #include <SPI.h>
 #include <MFRC522.h>
-
-#define SS_PIN 10
-#define RST_PIN 9
+#include "config.h"
+#include "functions.h"
+#include "communications.h"
 
 MFRC522 mfrc522(SS_PIN, RST_PIN);
 
 void setup() {
-  Serial.begin(9600);
-  while (!Serial); // Wait until serial port is opened
+  
   SPI.begin();
   mfrc522.PCD_Init();
+  establishContact();
 }
+
 
 void loop() {
   // Look for new RFID cards
@@ -35,5 +36,4 @@ void loop() {
     mfrc522.PCD_StopCrypto1();
   }
 }
-
 
