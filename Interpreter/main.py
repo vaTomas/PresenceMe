@@ -57,12 +57,12 @@ def get_attendance_time(timestamp):
     date = timestamp.date()
     time = timestamp.time()
 
-    if date == datetime(2023, 4, 24).date():
-        if time >= datetime(1900, 1, 1, 0, 0).time() and time < datetime(1900, 1, 1, 9, 30).time():
+    if date == datetime(2023, 8, 25).date():
+        if time >= datetime(1900, 1, 1, 10, 0).time() and time < datetime(1900, 1, 1, 12, 0).time():
             return 1
-        elif time >= datetime(1900, 1, 1, 9, 30).time() and time < datetime(1900, 1, 1, 12, 0).time():
+        elif time >= datetime(1900, 1, 1, 12, 0).time() and time < datetime(1900, 1, 1, 18, 0).time():
             return 2
-        elif time >= datetime(1900, 1, 1, 12, 0).time() and time < datetime(1900, 1, 1, 14, 30).time():
+        elif time >= datetime(1900, 1, 1, 18, 0).time() and time < datetime(1900, 1, 1, 22, 0).time():
             return 3
         else:
             return 4
