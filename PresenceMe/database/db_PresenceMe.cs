@@ -1,11 +1,16 @@
 ﻿using PresenceMe.classes;
+using System;
+using System.Buffers.Text;
 using System.Collections.Generic;
 
 namespace PresenceMe.database
 {
     class db_PresenceMe
     {
-        public static List<Person> People { get; set; }
+        //Memory
+        public static Dictionary<Ulid, Person> People { get; set; }
+        public static Dictionary<UInt32, byte[]> RFIDs { get; set; }
+
         public static uint LatestRFID { get; set; }
         public static Person LatestPerson { get; set; }
         public static Attendance LatestAttendance { get; set; }
@@ -28,5 +33,11 @@ namespace PresenceMe.database
         //    TempFile = new fileRecord();
         //    AccessFile = new fileRecord();
         //}
+
+        static db_PresenceMe()
+        {
+            People = new Dictionary<Ulid, Person>();
+            RFIDs = new Dictionary<UInt32, byte[]>();
+        }
     }
 }

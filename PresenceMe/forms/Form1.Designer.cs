@@ -72,7 +72,6 @@
         #endregion
 
         private System.Windows.Forms.Label lblSerialData;
-        private System.Windows.Forms.Label lblOutput;
         private System.Windows.Forms.TextBox txtInput;
     }
 }

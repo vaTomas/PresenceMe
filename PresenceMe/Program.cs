@@ -1,5 +1,4 @@
 ﻿using PresenceMe.forms;
-using PresenceMe.src;
 using System;
 using System.Windows.Forms;
 
@@ -11,7 +10,6 @@ namespace PresenceMe
         [STAThread]
         static void Main()
         {
-            Database waterfalls = new Database();
 
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
