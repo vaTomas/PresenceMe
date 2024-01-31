@@ -15,12 +15,13 @@ namespace PresenceMe.src
     {
         private static void StoreDataToFile()
         {
+            DBPile saveFileObject = DBPresenceMe.LocalData;
 
             JsonSerializerOptions options = new JsonSerializerOptions();
-            options.WriteIndented = false;
-
-            byte[] jsonByte = JsonSerializer.SerializeToUtf8Bytes<Dictionary<string, Person>>(DBPresenceMe.People, options);
-            File.WriteAllBytes(DBPresenceMe.SaveFileLocation, jsonByte);
+            options.WriteIndented = true;
+            
+            byte[] jsonBytes = JsonSerializer.SerializeToUtf8Bytes<DBPile>(saveFileObject, options);
+            File.WriteAllBytes(DBPresenceMe.SaveFileLocation, jsonBytes);
 
         }
 
@@ -30,7 +31,9 @@ namespace PresenceMe.src
             if (File.Exists(DBPresenceMe.SaveFileLocation))
             {
                 byte[] jsonBytes = File.ReadAllBytes(DBPresenceMe.SaveFileLocation);
-                DBPresenceMe.People = JsonSerializer.Deserialize<Dictionary<string, Person>>(jsonBytes);
+                DBPile saveFileObject = JsonSerializer.Deserialize<DBPile>(jsonBytes);
+
+                DBPresenceMe.LocalData = saveFileObject;
             }
         }
 

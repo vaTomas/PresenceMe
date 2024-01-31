@@ -13,7 +13,7 @@ using System.IO;
 using PresenceMe.MyPackages;
 using PresenceMe.src;
 
-namespace PresenceMe.forms
+namespace PresenceMe.Forms
 {
     public partial class Form1 : Form
     {
@@ -30,6 +30,19 @@ namespace PresenceMe.forms
             {
                 UInt32 rfid = Convert.ToUInt32(txtInput.Text);
                 txtInput.Text = "";
+
+                //lblSerialData.Text = $"We Found {RFIDManager.findMatchingKey(rfid).ToString()}";
+
+                string owner = RFIDManager.RetrieveOwner(rfid);
+                if(owner != null)
+                {
+                    lblSerialData.Text = $"We Found {RFIDManager.RetrieveOwner(rfid).ToString()} {DBPresenceMe.LocalData.People[owner].IdNumber}";
+                }
+                else
+                {
+                    lblSerialData.Text = "ID Not found";
+                }
+                
 
                 //UInt32 referenceNumber = BitwiseOperationHelpers.ConcatenateBits("2D", "26AE");
 
@@ -68,10 +81,10 @@ namespace PresenceMe.forms
 
                 options.WriteIndented = true;
 
-                string jsonString = JsonSerializer.Serialize<Dictionary<string, Person>>(DBPresenceMe.People, options);
+                string jsonString = JsonSerializer.Serialize<Dictionary<string, Person>>(DBPresenceMe.LocalData.People, options);
                 File.WriteAllText("people.json", jsonString);
 
-                jsonString = JsonSerializer.Serialize<Dictionary<UInt32, string>>(DBPresenceMe.RFIDs, options);
+                jsonString = JsonSerializer.Serialize<Dictionary<UInt32, string>>(DBPresenceMe.LocalData.RFIDs, options);
                 File.WriteAllText("rfids.json", jsonString);
             }
         }

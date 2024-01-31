@@ -1,6 +1,6 @@
 ﻿using System.Windows.Forms;
 
-namespace PresenceMe.forms
+namespace PresenceMe.Forms
 {
     partial class Form1
     {

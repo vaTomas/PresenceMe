@@ -1,4 +1,5 @@
-﻿using PresenceMe.forms;
+﻿using PresenceMe.Forms;
+using PresenceMe.LocalDatabase;
 using System;
 using System.Windows.Forms;
 

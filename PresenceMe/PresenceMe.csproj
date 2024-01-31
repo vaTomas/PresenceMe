@@ -129,6 +129,7 @@
   <ItemGroup>
     <Compile Include="classes\attendance.cs" />
     <Compile Include="classes\person.cs" />
+    <Compile Include="database\DBPile.cs" />
     <Compile Include="database\DBPresenceMe.cs" />
     <Compile Include="forms\Form1.cs">
       <SubType>Form</SubType>
@@ -138,7 +139,9 @@
     </Compile>
     <Compile Include="MyPackages\BitwiseOperationHelpers.cs" />
     <Compile Include="MyPackages\CompareBits.cs" />
-    <Compile Include="MyPackages\FileManager.cs" />
+    <Compile Include="MyPackages\ImportManager.cs" />
+    <Compile Include="src\PeopleManager.cs" />
+    <Compile Include="src\RFIDManager.cs" />
     <Compile Include="src\SaveManager.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
