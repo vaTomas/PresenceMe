@@ -3,17 +3,18 @@ using System;
 using System.Buffers.Text;
 using System.Collections.Generic;
 
-namespace PresenceMe.database
+namespace PresenceMe.LocalDatabase
 {
-    class db_PresenceMe
+    class DBPresenceMe
     {
         //Memory
-        public static Dictionary<Ulid, Person> People { get; set; }
-        public static Dictionary<UInt32, byte[]> RFIDs { get; set; }
+        public static Dictionary<string, Person> People { get; set; }
+        public static Dictionary<UInt32, string> RFIDs { get; set; }
 
-        public static uint LatestRFID { get; set; }
-        public static Person LatestPerson { get; set; }
-        public static Attendance LatestAttendance { get; set; }
+
+        //Save Config
+        public static string SaveFileLocation { get; set; }
+
         //public static fileRecord AccessFile { get; set; }
         //public static fileRecord TempFile { get; set; }
         //public static zc_Defaults Defaults { get; set; }
@@ -34,10 +35,10 @@ namespace PresenceMe.database
         //    AccessFile = new fileRecord();
         //}
 
-        static db_PresenceMe()
+        static DBPresenceMe()
         {
-            People = new Dictionary<Ulid, Person>();
-            RFIDs = new Dictionary<UInt32, byte[]>();
+            People = new Dictionary<string, Person>();
+            RFIDs = new Dictionary<UInt32, string>();
         }
     }
 }
